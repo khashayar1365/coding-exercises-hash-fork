@@ -16,8 +16,8 @@ public class SpellChecker {
     // Adding ability to customize distance function and filter function
     public SpellChecker(String dictionaryPath,
                         Function<String, Function<String, Integer>> distance,
-                        int macDistance) throws IOException {
-        dictionary = new Dictionary(dictionaryPath, distance, macDistance);
+                        int maxDistance) throws IOException {
+        dictionary = new Dictionary(dictionaryPath, distance, maxDistance);
     }
 
     public void setContextLength(int contextLength) {
